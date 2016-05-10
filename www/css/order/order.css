@@ -1,0 +1,132 @@
+.scroll-bar-v{
+	display: none!important;
+}
+#order .order-back,#order .order-list{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 7px;
+	text-align: center;
+	background: none;
+	border: 0;
+	padding: 0;
+}
+#order .order-back i,#order .order-list i{
+	font-size: 30px;
+}
+#order .order-back{
+	left: 10px;
+}
+#order .order-list{
+	right: 10px;
+}
+#order-content{
+	padding: 50px 10px 0;
+}
+#order-content section{
+	margin: 3px 0 7px 0;
+	width: 100%;
+	background-color: #fff;
+	position: relative;
+}
+#order-content section a{
+	display: block;
+	padding: 10px 20px;
+}
+#order-content .section-img-pane {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	float: left;
+	margin-right: 10px;
+	overflow: hidden;
+	border-radius: 50%;
+}
+#order-content .section-img-pane img{
+	height: 100%;
+	max-width: inherit;
+}
+#order-content section h4{
+	color: #EA2424;
+	font-size: 14px;
+	margin: 7px 4px 4px;
+
+}
+#order-content .prod-price{
+	text-align: left;
+}
+#order-content .group-pane{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	padding: 0 16px 2px 0;
+}
+#order-content section .input-group>i{
+	float: right;
+}
+#order-content section .input-group .add,#order-content section .input-group .minus{
+	font-size: 20px;
+	color: #3096E0;
+	line-height: 30px;
+}
+
+#order-content section .input-group .minus{
+	color: #999;
+
+}
+#order-content section .input-group .num{
+	text-align: center;
+	height: 30px;
+	line-height: 32px;
+	width: 24px;
+	font-size: 14px;
+	background-color: #fff;
+	padding:0;
+}
+#order-footer{
+	padding: 0!important;
+	height: 44px;
+	position: fixed;
+	bottom:0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+}
+#order-footer .order-price,#order-footer .order-book{
+	height: 100%;
+	border-top: 1px solid #ddd;
+}
+#order-footer .order-price{
+	width: 60%;
+	padding-left: 10px;
+	padding-top: 2px;
+}
+#order-footer .order-price p strong{
+	font-size: 14px;
+	color: #f50;
+}
+#order-footer .order-price p{
+	line-height: 20px;
+	margin: 0;
+	font-size: 12px;
+	color: #666;
+}
+#order-footer .order-price p:last-child{
+	color: #999;
+	padding-left: 14px;
+}
+#order-footer .order-book{
+	background-color: #f15353;
+	width: 40%;
+}
+#order-footer .order-book a{
+	color: #fff;
+	font-size: 14px;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 44px;
+	padding: 0 	10px;
+}

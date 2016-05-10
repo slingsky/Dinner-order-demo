@@ -1,0 +1,53 @@
+<ion-view id="ProductSingle" view-title="详情页" cache-view="false">
+	<div>
+		<ion-side-menus>
+			<ion-side-menu-content drag-content="true" id="prodsingle-content">
+				<ion-content overflow-scroll="true">
+					<div id="prolis-page">
+						<div clas="prolis-header">
+							<button class="product-back" ng-click="func_goBack()"><i class="icon ion-reply"></i></button>
+			      	<button class="product-list" ng-click="toggleSideMenu()"><i class="icon ion-android-menu"></i></button>
+						</div>
+						<div class="prolis-pic">
+							<img src="{{foodConten.item.imgUrl}}" alt="">
+							<i class="brand"><img ng-src="img/logo.svg" alt="" width="100%"></i>
+						</div>
+						<div class="prolis-single-price clearfix">
+							<div class="prolis-pricePane f_left">
+								<span class="last-price">{{foodConten.item.lastPrice}}</span>
+								<span class="new-price">{{foodConten.item.currentPrice}}</span>
+								<span class="currency">￥</span>
+							</div>
+							<div class="pro_input-group f_right clearfix">
+								<div class="clearfix f_left pro_hide">
+				          <i class="minus icon ion-android-remove-circle" ng-click="minus(foodConten.item.id)"></i>
+				          <input class="num" ng-model="foodConten.num" type="number" readonly />
+				        </div>
+				        <i class="add icon ion-android-add-circle" ng-click="add(foodConten.item.id)"></i>
+							</div>
+						</div>
+						<article>
+							<h4>{{foodConten.item.name}}</h4>
+							<p><strong>简介: </strong>{{foodConten.item.introduce}}</p>
+							<p><strong>主要食材: </strong>{{foodConten.item.food}}</p>
+							<p><strong>口味: </strong>{{foodConten.item.taste}}</p>
+						</article>	
+					</div>
+					<footer>
+						<p>Your Choice My Pleasure</p>
+					</footer>
+				</ion-content>
+			</ion-side-menu-content>
+			<ion-side-menu side="right" width="140" id="prosingle_side">
+				<ion-list>
+				  <ion-item ng-repeat="item in menus">
+				  	<a href="{{item.url}}">
+				  		<i class="icon {{item.iconName}}"></i>
+				   		{{item.name}}
+				  	</a>
+				  </ion-item>
+				</ion-list>
+	  	</ion-side-menu>
+		</ion-side-menus>
+	</div>
+</ion-view>

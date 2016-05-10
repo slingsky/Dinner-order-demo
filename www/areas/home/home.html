@@ -1,0 +1,78 @@
+<ion-view id="home" view-title="首页" cache-view="false">
+  <div id="header">
+    <form action>
+      <div class="search" >
+        <!-- <a href="javascript:;" class="product-back"><i class="icon ion-reply"></i></a>
+      <a href="javascript:;" class="product-list"><i class="icon ion-android-menu"></i></a> -->
+        <input type="search" placeholder="红烧排骨">
+        <i class="icon ion-ios-search-strong icons_search"></i>
+      </div>
+    </form>
+  </div> 
+    <ion-content scroll="true" id="home-content" >
+      <ion-refresher
+        pulling-text="获取最新数据..."
+        refreshing-text="正在加载"
+        on-refresh="func_doRefresh()">
+      </ion-refresher>
+      
+      <div class="swiper-container" id="header-banner">
+        <ul class="swiper-wrapper">
+          <li style="background-image: url(img/gallery/1.jpg);" class="swiper-slide">
+            
+          </li>
+          <li style="background-image: url(img/gallery/2.jpg);" class="swiper-slide"></li>
+          <li style="background-image: url(img/gallery/3.jpg);" class="swiper-slide"></li>
+        </ul>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="product_list">
+        <ul class="clearfix">
+          <li ng-repeat="lis in iconList track by $index">
+            <a href="javascript:;">
+              <i class="pro_pic"></i>
+              <p>{{iconList[$index]}}</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- <ion-list> -->
+        <div id="product-content">
+          <section ng-repeat="key in obj_goodsListData">
+            <a href="#/productSingle/{{key.id}}" class="clearfix">
+              <div class="section-img-pane">
+                <img ng-src="{{key.imgUrl}}" alt="">
+              </div>
+              <h4>{{key.name}}</h4>
+              <div class="prod-price">
+                <span class="last-price">{{key.lastPrice}}</span>
+                <span class="new-price">{{key.currentPrice}}</span>
+                <span class="currency">￥</span>
+              </div>
+              <div class="a-meta">
+                <div class="product-stars f_left">
+                  <i class="icon ion-ios-star" ></i>
+                  <i class="icon ion-ios-star" ></i>
+                  <i class="icon ion-ios-star" ></i>
+                  <i class="icon ion-ios-star" ></i>
+                </div>
+              </div>
+            </a>
+            <div class="input-group f_right clearfix">
+              <i class="add icon ion-android-add-circle f_right" ng-click="add(key.id)"></i>
+              <div class="clearfix f_right hide" ng-class="{show: key.onOff}">
+                <i class="minus icon ion-android-remove-circle f_left" ng-click="minus(key.id)"></i>
+                <input class="num f_left" ng-model="key.num" type="number" readonly />               
+              </div>
+            </div>
+          </section>
+        </div>
+      <!-- </ion-list> -->
+      <div ng-hide="pms_isMoreItemsAvailable" style="text-align: center">
+        <span>更多菜品即将上线，敬请期待！</span>
+      </div>
+      <ion-infinite-scroll ng-show="pms_isMoreItemsAvailable" on-infinite="func_loadMoreGoodsList()" distance="1%">
+      </ion-infinite-scroll>
+    </ion-content>
+
+</ion-view>

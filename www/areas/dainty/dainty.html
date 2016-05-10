@@ -1,0 +1,47 @@
+<ion-view id="dainty" view-title="详情页" cache-view="false">
+  <div id="page"> 
+    <ion-content id="dainty-content" scroll="true" style="overflow-y: auto;">
+      <div id="daintyHeader">
+        <img src="img/gallery/6.jpg" alt="" width ="100%">
+      </div>
+      <ion-list>
+        <div id="product-content">
+          <section ng-repeat="item in obj_goodsListData">
+            <a href="#/productSingle/{{item.id}}" class="clearfix">
+              <div class="section-img-pane">
+                <img ng-src="{{item.imgUrl}}" alt="">
+              </div>
+              <h4>{{item.name}}</h4>
+              <div class="prod-price">
+                <span class="last-price">{{item.lastPrice}}</span>
+                <span class="new-price">{{item.currentPrice}}</span>
+                <span class="currency">￥</span>
+              </div>
+              <div class="a-meta">
+                <div class="product-stars f_left">
+                  <i class="icon ion-ios-star" ></i>
+                  <i class="icon ion-ios-star" ></i>
+                  <i class="icon ion-ios-star" ></i>
+                  <i class="icon ion-ios-star" ></i>
+                </div>
+              </div>
+            </a>
+            <div class="input-group f_right clearfix">
+              <i class="add icon ion-android-add-circle f_right" ng-click="add(item.id)"></i>
+              <div class="clearfix f_right hide" ng-class="{show:item.onOff}">
+                <i class="minus icon ion-android-remove-circle f_left" ng-click="minus(item.id)"></i>
+                <input class="num f_left" ng-model="item.num" type="number" readonly />
+              </div>
+              
+            </div>
+          </section>
+        </div>
+      </ion-list>
+      <div  style="text-align: center">
+        <span>更多菜品即将上线，敬请期待！</span>
+      </div>
+      <!-- <ion-infinite-scroll ng-if="onOff" on-infinite="func_loadMoreGoodsList()" distance="1%">
+      </ion-infinite-scroll> -->
+    </ion-content>
+  </div>
+</ion-view>

@@ -1,0 +1,40 @@
+<ion-view id="order" view-title="订单" cache-view="false">
+  <div class="bar bar-header bar-stable">
+    <h1 class="title">13号桌</h1>
+    <span class="order-back" ng-click="func_goBack()"><i class="icon ion-reply"></i></span>
+    <span class="order-list" ng-click="func_goHome()"><i class="icon ion-android-home"></i></span>
+  </div>
+  <ion-content id="order-content" scroll="true" style="overflow-y: auto;">
+    <section ng-repeat="val in orderList.data">
+      <a href="#/productSingle/{{val.id}}" class="clearfix">
+        <div class="section-img-pane">
+          <img ng-src="{{val.imgUrl}}" alt="">
+        </div>
+        <h4>{{val.name}}</h4>
+        <div class="prod-price">
+          <span class="new-price">{{val.currentPrice}}</span>
+          <span class="currency">￥/份</span>
+        </div>
+      </a>
+      <div class="group-pane clearfix">
+        <div class="input-group clearfix f_right">
+          <i class="add icon ion-android-add-circle" ng-click="add(val.id)"></i>
+          <div class="clearfix f_right hide show">
+            <i class="minus icon ion-android-remove-circle f_left" ng-click="minus(val.id)"></i>
+            <input class="num f_left" ng-model="val.num" type="number" readonly />    
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </ion-content>
+  <div id="order-footer" class="clearfix">
+    <div class="order-price f_left">
+      <p><strong>合计：</strong>{{orderList.totalPrice | currency : '￥'}}</p>
+      <p>已优惠：{{orderList.discount | currency : '￥'}}</p>
+    </div>
+    <div class="order-book f_right">
+      <a herf="#">呼叫服务员({{orderList.totalNum}})</a>
+    </div>
+  </div>
+</ion-view>

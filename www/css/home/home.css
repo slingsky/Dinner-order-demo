@@ -1,0 +1,254 @@
+#page{
+	width: 100%;
+	height: 100%;
+	font-size: 12px;
+	font-family: "微软雅黑";
+	background-color: #eaeaea;
+}
+#header{
+	height: 38px;
+	width: 100%;
+	background: rgba(230,230,230,0);
+	position: fixed;
+	z-index: 2;
+	top: 0;
+}
+#header .search{
+	width: 100%;
+	padding: 5px 30px;
+}
+#header input{
+	width: 100%;
+	height: 28px;
+	border-radius: 15px;
+	font-size: 13px;
+	line-height: 28px;
+	padding-left: 10px;
+	padding-right: 30px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+
+}
+.icons_search{
+	position: absolute;
+	font-size: 24px;
+	right: 40px;
+	top: 7px;
+	color: #EA2424;
+}
+#header-banner{
+	height: 150px;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+#header-banner ul{
+	width: 1000%;
+	height: 100%;
+}
+#header-banner ul li{
+	width : 10%;
+	height: 100%;
+	background-repeat:no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-position: 50% 50%;
+}
+.product-list,.product-back{
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: 10px;
+	z-index: 1;
+}
+.product-list i,.product-back i{
+	font-size: 30px;
+	line-height: 35px;
+	text-align: center;
+	display: block;
+	color: #fff;
+}
+.product-list{
+	right: 10px;
+}
+.product-back{
+	left: 10px;
+}
+#product-content{
+	
+	height: 100%;
+	padding: 1px;
+}
+#product-content section{
+	margin: 3px 0;
+	width: 100%;
+	background-color: #fff;
+	position: relative;
+}
+#product-content section a{
+	display: block;
+}
+.section-img-pane {
+	width: 120px;
+	height: 120px;
+	position: relative;
+	float: left;
+	margin-right: 10px;
+	overflow: hidden;
+}
+.section-img-pane img{
+	height: 100%;
+	max-width: inherit;
+}
+section h4{
+	color: #EA2424;
+	font-size: 14px;
+	margin: 7px 4px 4px;
+
+}
+.prod-price{
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+}
+.last-price,.currency{
+	font-size: 20px;
+	color: #aaa;
+	text-decoration: line-through;
+}
+.new-price{
+	font-size: 30px;
+	margin: 0 5px;
+	color: #EA2424;
+}
+.currency{
+	text-decoration: none;
+}
+.a-meta{
+	height: 30px;
+	width: 100%;
+	background-color: #f4f3f2;
+	margin-top: 4px;
+	padding-right: 5px;
+	font-size: 14px;
+	line-height: 30px;
+}
+.product-stars i{
+	color: #EA2424;
+
+}
+#product-content section .input-group{
+	padding-right: 5px;
+	position: absolute;
+	bottom: 0px;
+	right: 5px;
+	height: 30px;
+	width: 100px;
+	overflow: hidden;
+}
+
+#product-content section .input-group>i{
+	float: right;
+}
+#product-content section .input-group .add,#product-content section .input-group .minus{
+	font-size: 20px;
+	color: #3096E0;
+	line-height: 30px;
+}
+
+#product-content section .input-group .minus{
+	color: #999;
+
+}
+#product-content section .input-group .num{
+	text-align: center;
+	height: 30px;
+	line-height: 32px;
+	width: 24px;
+	font-size: 14px;
+	background-color: #f4f3f2;
+	padding:0;
+
+}
+
+.hide{
+	width: 0;
+	height: 30px;
+	padding-left: 5px;
+	overflow: hidden;
+	
+
+}
+.show{
+	width: auto;
+	transition: width 2s;
+	-moz-transition: width 2s;
+	-webkit-transition: width 2s;
+	-o-transition: width 2s;
+}
+
+/* 分类 */
+.product_list{
+	height: 150px;
+	padding: 8px 5px;
+	border-bottom: 1px solid #DDD8CE;
+	border-top: 1px solid #DDD8CE;
+	background-color: #fff;
+}
+.product_list ul{
+	width: 100%;
+}
+.product_list li{
+	float: left;
+	width: 25%;
+}
+.product_list i.pro_pic{
+	display: block;
+	width: 40px;
+	height: 40px;
+	background:url(../../img/gallery/home_jl.png); no-repeat;
+	overflow: hidden;
+	margin: 0 auto;
+	background-position: 0 0;
+	background-size: 200px 200px;
+	-webkit-background-size: 200px 200px;
+	-ms-background-size: 200px 200px;
+	-moz-background-size: 200px 200px;
+	-o-background-size: 200px 200px;
+}
+.product_list p{
+	line-height: 30px;
+	font-size: 13px;
+	text-align: center;
+	margin: 0;
+}
+.product_list li:nth-child(2) .pro_pic{
+	background-position: -53.5px 0;
+}
+.product_list li:nth-child(3) .pro_pic{
+	background-position: -106.5px 0;
+}
+.product_list li:nth-child(4) .pro_pic{
+	background-position: -160px 0;
+}
+.product_list li:nth-child(5) .pro_pic{
+	background-position: 0px -50px;
+}
+.product_list li:nth-child(6) .pro_pic{
+	background-position: -53.5px -50px;
+}
+.product_list li:nth-child(7) .pro_pic{
+	background-position: -106.5px -50px;
+}
+
+#daintyHeader{
+	border-bottom: 3px solid #DADADA;
+}
